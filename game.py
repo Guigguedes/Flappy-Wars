@@ -10,7 +10,7 @@ speed = 10
 game_speed = 10
 gravidade = 1
 a = 1
- 
+
 largura_base = 2 * largura_tela
 altura_base = 100
 
@@ -142,6 +142,20 @@ def name():
             tela.blit(block, rect)
             pygame.display.flip()
 
+if name == "main":
+    email = name()
+    arquivo = open("emails.txt","r")
+    emails = arquivo.readlines()
+    emails.append(email)
+    emails.append("\n")
+    arquivo = open("emails.txt","w")
+    arquivo.writelines(emails)
+
+    arquivo = open("emails.txt","r")
+    texto = arquivo.readlines()
+    for line in texto:
+        print(line)
+    arquivo.close()
 
 nave_grupo = pygame.sprite.Group()
 nave = Nave()
