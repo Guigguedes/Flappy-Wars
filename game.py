@@ -9,7 +9,8 @@ altura_tela = 800
 speed = 10
 game_speed = 10
 gravidade = 1
-
+a = 1
+ 
 largura_base = 2 * largura_tela
 altura_base = 100
 
